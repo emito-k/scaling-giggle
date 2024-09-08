@@ -24,28 +24,19 @@
         }
     </style>
 
-    <script defer src="./app.js"></script>
+    <script defer src="./app.js" type="module"></script>
 </head>
 <body>
     <div class="message-box">
-        <div class="message">
-            hello
-        </div>
-        <div class="message">
-            hello
-        </div>
-        <div class="message">
-            hello
-        </div>
     </div>
 
     <div class="input-box">
         <form action="">
             <div>
-                <label for="message-input">Message</label> <input title="message-input" placeholder="Message" name="message-input" type="text" name="" id="message-id"> <button>Send</button>
+                <label for="message-input">Message</label> <input title="message-input" placeholder="Message" name="message-input" type="text" name="" id="message-input"> <button id="submit-message">Send</button>
             </div>
             <div>
-                <label for="room-input">Room</label> <input title="room-input" placeholder="1234" name="room-input" type="text" name="" id="room-id"> <button>Join</button>
+                <label for="room-input">Room</label> <input title="room-input" placeholder="1234" name="room-input" type="text" name="" id="room-input"> <button id="submit-room-join">Join</button>
             </div>
         </form>
     </div>
