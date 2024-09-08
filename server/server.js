@@ -13,7 +13,17 @@ io.on("connection", (socket) => {
     console.log(obj);
   });
 
-  socket.on("send-message", (message) => {
-    console.log(message);
+  socket.on("send-message", (data) => {
+    console.log(data);
+
+    if (data.room) {
+      socket.to(data.room).emit("receive-message", data);
+    } else {
+      socket.broadcast.emit("receive-message", data);
+    }
+  });
+
+  socket.on("join-room", (room) => {
+    socket.join(room);
   });
 });
